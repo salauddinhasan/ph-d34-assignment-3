@@ -1,4 +1,4 @@
-/*function signature/sample */
+/* problem 1 */
 
 function newPrice(currentPrice , discount ) {
     
@@ -14,23 +14,26 @@ function newPrice(currentPrice , discount ) {
 }
 
 
-/*function signature/sample */
 
-function newPrice(currentPrice , discount ) {
-    
+/*problem 2 */
 
-    if(typeof currentPrice !== 'number' || typeof discount !== 'number' || currentPrice <= 0 || discount < 0 || discount > 100) {
+function validOtp(otp) {
+         
+    if(typeof otp !== 'string') {
         return 'Invalid';
     }
-    
-    let discountAmount = (currentPrice * discount) / 100;
-    let finalPrice = currentPrice - discountAmount;
 
-    return finalPrice.toFixed(3);
+    else if(otp.startsWith('ph-') && otp.length === 8) {
+        return true;
+        
+    } else {
+        return false;
+    }
+ 
 }
 
 
-/*function signature/sample */
+/*problem 3 */
 
 function finalScore (omr) {
     
@@ -49,13 +52,12 @@ function finalScore (omr) {
     let score = (right * 1) - (wrong * 0.5);
     return Math.round(score);
 
- }  
+ } 
+ 
 
+ /*problem 4 */
 
-
- /*function signature/sample */
-
- function gonoVote(array) {
+function gonoVote(array) {
   
     if(!Array.isArray(array)){
         return 'Invalid';
@@ -84,10 +86,9 @@ function finalScore (omr) {
 }
 
 
+/* problem 5 */
 
-/*function signature/sample */
-
-function  analyzeText(str) {
+ function  analyzeText(str) {
          
     if(typeof str !== 'string' || str.trim() === '') {
         return 'Invalid';
