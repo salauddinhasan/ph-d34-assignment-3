@@ -7,9 +7,9 @@ function  analyzeText(str) {
     } 
 
  const words = str.split(' ');
- 
- 
  let longwords = '';
+
+
  for(let word of words) {
 
     if(word.length > longwords.length) {
@@ -17,7 +17,7 @@ function  analyzeText(str) {
     }
  }
 
- const tokenCount = str.replace( / /g,'').length;
+ const tokenCount = str.replace( / /g, '').length;
  return {longwords:longwords, token:tokenCount };
     
 }
